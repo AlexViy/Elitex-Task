@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
+// Global Reset
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+body
+  font-family: 'Open Sans', sans-serif
+  color: rgba(0,0,0,.87)
+
+.wrapper
+  padding: 48px 16px
+  max-width: 600px
+
+#accordion
+  border-radius: 4px
+  padding-bottom: 0
+  box-shadow: 0px 4px 8px rgba(0,0,0,.12)
+  border: 1px solid #bbb
+
+.panel
+  user-select: none
+  color: rgba(0,0,0,.54)
+  padding: 16px 32px
+  background: #f0f9f9
+
+.panel-top
+  position: relative
+  margin-top: 0
+  cursor: pointer
+  outline: none
+  box-shadow: 0px 4px 8px rgba(0,0,0,.12)
+  border-top-left-radius: 4px
+  border-top-right-radius: 4px
+  border-bottom-left-radius: 0px
+  border-bottom-right-radius: 0px
+  border-bottom: 1px solid #bbb
+
+.panel-bottom
+  border-top: 1px solid #bbb
+  border-bottom-left-radius: 4px
+  border-bottom-right-radius: 4px
+
+.round-corners
+  border-bottom-left-radius: 4px
+  border-bottom-right-radius: 4px
+
+.content
+  background: #f4f9f9
+  border-bottom-left-radius: 4px
+  border-bottom-right-radius: 4px
+  box-shadow: 0px 0px 4px rgba(0,0,0,.08)
+  height: auto
+
+  table
+    border-collapse: collapse
+    background: #fff
+    table-layout: fixed
+    width: 100%
+
+    th
+      padding: 8px
+
+    thead
+      user-select: none
+      background: #444
+      color: #fafafa
+      box-shadow: 0px 2px 4px rgba(0,0,0,.12)
+      border-bottom: 1px solid #bbb
+      text-align: left
+
+    thead, tbody
+      display: flex
+      flex-direction: column
+      tr
+        min-height: 32px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        td, th
+          min-width: 200px
+          padding-left: 16px
+          flex-grow: 1
+        th:last-child
+          border-left: 1px solid #aaa
+
+    tbody
+      overflow-x: hidden
+      overflow-y: scroll
+      height: 100px
+
+    .table-head-name
+      display: flex
+      justify-content: space-between
+      .icon
+        cursor: pointer
+
+.addnew
+  display: flex
+  padding: 8px
+  background: #444
+  color: #fafafa
+  flex-wrap: wrap
+  @media(min-width: 420px)
+    flex-wrap: nowrap
+
+.fields
+  display: flex
+  flex-grow: 1
+
+  .field-name
+    flex-grow: 1
+
+.input
+  width: 100%
+  border-radius: 4px
+  border: 1px solid transparent
+  font-size: 1em
+  padding: 8px 12px
+
+.input-name
+  border-top-right-radius: 2px
+  border-bottom-right-radius: 2px
+
+.input-price
+  border-top-left-radius: 2px
+  border-bottom-left-radius: 2px
+  margin-left: 1px
+
+.controls
+  display: flex
+  margin-top: 12px
+  width: 100%
+  @media(min-width: 420px)
+    width: auto
+    margin-top: 0
+
+.add-btn
+  border-radius: 4px
+  border: 1px solid transparent
+  font-size: 1.5em
+  font-weight: 500
+  cursor: pointer
+  background: rgba(144,238,244,1)
+  width: 100%
+  padding: 8px 12px
+  &:hover
+    color: #fff
+    background: rgba(144,238,244,.5)
+  @media(min-width: 420px)
+    flex-grow: 0
+    margin-left: 8px
+    padding: 0 12px
+
+.icon-open
+  transform: rotate(180deg)
+  float: right
+  transition: .2s ease-out
+  font-size: 2rem
+
+.icon-del
+  float: right
+  cursor: pointer
+
+.rotate
+  transform: rotate(0deg) translateY(3px)

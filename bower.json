@@ -1,0 +1,22 @@
+{
+  "name": "project",
+  "description": "Single page website",
+  "main": "index.js",
+  "author": [
+    "AlexViy"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "knockoutjs#^3.4.2",
+    "jquery": "^3.3.1",
+    "jquery-ui": "jqueryui#^1.12.1"
+  }
+}

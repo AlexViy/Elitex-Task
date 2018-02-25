@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="initial-scale=1, maximum-scale=1")
+    
+    title Elitex-Task
+    
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel='stylesheet' type='text/css' href='css/style.css')
+    
+    script(type='text/javascript', src='./bower_components/knockout/dist/knockout.js')
+    script(type='text/javascript', src='./bower_components/jquery/dist/jquery.min.js') 
+    script(type='text/javascript', src='./bower_components/jquery-ui/jquery-ui.min.js')
+    
+  body
+    .wrapper
+      #accordion
+        h3.panel.panel-top Expenses
+          i.material-icons.icon-open &#xE313
+          
+        .content
+          table
+            thead
+              tr
+                th.table-head-name Name
+                  i.material-icons.icon(data-bind="click: sort") &#xE053;
+                th Price, $
+                
+            tbody(data-bind="foreach: expensList")
+              tr
+                td(data-bind="text: name" contenteditable="true")
+                td(data-bind="text: price")
+                  
+          form.addnew(data-bind="submit: add")
+            
+            .fields
+              .field.field-name
+                input.input.input-name(required type="text" placeholder="expense name" data-bind="textInput: newName")
+              .field
+                input.input.input-price(required type="number" placeholder="price ($)" data-bind="textInput: newPrice")
+            .controls
+              button.add-btn(type="submit") +
+              
+          h3.panel.panel-bottom Total
+            span(data-bind="text: total")
+            i.material-icons.icon-del(data-bind="click: cleanUp") delete
+                
+    script(type='text/javascript', src='scripts.js')
+    
